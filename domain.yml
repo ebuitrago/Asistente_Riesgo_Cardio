@@ -1,0 +1,275 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- saludo:
+    use_entities: false
+- despedida:
+    use_entities: false
+- genero:
+    use_entities: true
+- peso:
+    use_entities: true
+- edad:
+    use_entities: true
+- afirmar:
+    use_entities: true
+- negar:
+    use_entities: true
+- agradecimiento:
+    use_entities: true
+- colesterol:
+    use_entities: true
+- estatura:
+    use_entities: true
+- glicemia:
+    use_entities: true
+- presion_arterial:
+    use_entities: true
+entities:
+- genero
+- peso
+- edad
+- estatura
+- colesterol
+- glicemia
+slots:
+  a_first_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  b_last_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  c_genero:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+    values:
+    - hombre
+    - mujer
+  d_fumador:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+    values:
+    - si
+    - no
+  e_peso:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  f_edad:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  g_presion_arterial:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  h_diabetes:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+    values:
+    - si
+    - no
+  i_insuficiencia_renal:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+    values:
+    - si
+    - no
+  j_antecedentes_cardiacos:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+    values:
+    - si
+    - no
+  k_colesterol:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  l_glicemia:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  m_estatura:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_saludo:
+  - text: Hola. Soy Elison. Con tu información, voy a ayudar a que te sientas mucho mejor cada día. No puedo reemplazar a tu médico pero te doy una guia para que le cuentes al médico y se pueda confirmar el diagnóstico.
+  - text: Hola. Soy Elison. ¡Te doy a la bienvenida! Estoy para ayudar a que te sientas mucho mejor cada día. Al final de esta sesión te contaré el riesgo de enfermedad cardiovascular que según tu información, podrías tener. Y es muy importante que consultes ese diagnóstico con tu médico.
+  - text: Hola, con tu información voy a ayudarte a que te sientas mejor cada día. Mi objetivo no es reemplazar a tu médico. Busco apoyarlos a los dos y será importante que el diagnóstico que te de al final de esta sesión, lo consultes con tu médico.
+  utter_despedida:
+  - text: ¡Te veo luego! No olvides consultar con tu médico y completar los exámenes que te hagan falta.
+  - text: ¡Ten un buen día! No olvides consultar este diagnóstico con tu médico.
+  - text: Adiós, por aquí a la orden. Recuerda consultar con tu médico el diagnóstico que te he dado.
+  - text: Hasta luego. Recuerda consultar con tu médico el diagnóstico de tu riesgo cardiovascular que te he dado aquí.
+  utter_solicitar_nombres:
+  - text: Para empezar, me gustaría conocer tu nombre.
+  utter_agradecimiento_intermedio:
+  - text: Gracias por tu información.
+  - text: Gracias por brindarme esa información.
+  - text: Agradezco por haberme brindado esa información.
+  utter_ask_c_genero:
+  - text: Perfecto ¿Y eres hombre o mujer?
+  - text: Bien. En primer lugar me gustaría si eres hombre o mujer.
+  - text: O.K. Cuéntame si eres hombre o mujer.
+  utter_ask_d_fumador:
+  - buttons:
+    - payload: /afirmar
+      title: Si Fumo
+    - payload: /negar
+      title: No fumo
+    text: O.K {a_first_name}. En primer lugar cuéntame si fumas cigarrillo.
+  utter_ask_e_peso:
+  - text: Ahora dime cuánto pesas (en kilogramos).
+  - text: Ahora cuéntame cuántos kilos pesas.
+  - text: Ahora por favor cuéntame cuánto pesas (en kilogramos)
+  utter_ask_f_edad:
+  - text: Y ¿Cuál es tu edad?
+  utter_ask_g_presion_arterial:
+  - text: Ahora dime tus resultados recientes de presión arterial, recuerda que son dos números.
+  - text: Ahora cuéntame cuál fue la última lectura de tu presión arterial, recuerda que son dos números.
+  utter_ask_h_diabetes:
+  - buttons:
+    - payload: /afirmar
+      title: Si
+    - payload: /negar
+      title: No
+    text: ¿Y te han diagnósticado con diabetes?
+  - buttons:
+    - payload: /afirmar
+      title: Si
+    - payload: /negar
+      title: No
+    text: ¿Y sufres de diabetes?
+  - buttons:
+    - payload: /afirmar
+      title: Si
+    - payload: /negar
+      title: No
+    text: ¿Tienes diabetes?
+  utter_ask_i_insuficiencia_renal:
+  - buttons:
+    - payload: /afirmar
+      title: Si
+    - payload: /negar
+      title: No
+    text: Bueno, y cuéntame, ¿Tienes algún problema de riñones?
+  - buttons:
+    - payload: /afirmar
+      title: Si
+    - payload: /negar
+      title: No
+    text: ¿Te han dicho si tienes alguna insuficiencia renal?
+  utter_ask_j_antecedentes_cardiacos:
+  - buttons:
+    - payload: /afirmar
+      title: Si
+    - payload: /negar
+      title: No
+    text: Ahora cuéntame si en tu familia (padres, hermanos, abuelos, tios en primer grado), alguien sufre o ha sufrido de enfermedad coronaria (enfermedades del corazón).
+  utter_ask_k_colesterol:
+  - text: Ahora dime, ¿Cuál es tu valor de colesterol total? Escribe solo el número.
+  - text: Gracias por tu información. Ahora cuéntame ¿Cuál es tu valor de colesterol total? Escribe solo el número.
+  utter_ask_l_glicemia:
+  - text: ¿Y el valor de la glicemia en ayunas? Escribe solo el número.
+  - text: Vamos avanzando. Y cuéntame cuál es el valor de la glicemia en ayunas. Escribe solo el número.
+  utter_ask_m_estatura:
+  - text: Finalmente, cuéntame cuánto mides. Escribe solo el número. Si mides un metro con 70 centímetros, entonces escribe 170.
+  utter_ask_a_first_name:
+  - text: ¿Cuál es tu primer nombre?
+  utter_ask_b_last_name:
+  - text: ¿Cuál es tu apellido?
+  utter_submit:
+  - text: Ok. Thanks!
+  utter_slots_values:
+  - text: Entonces recordaré que tu nombre es {a_first_name} {b_last_name}, eres {c_genero}, {d_fumador} fumas, pesas {e_peso} kilogramos, tienes {f_edad} años, tu presión arterial es {g_presion_arterial}, {h_diabetes} te han diagnósticado diabetes, {i_insuficiencia_renal} te han diagnósticado insuficiencia renal, {j_antecedentes_cardiacos} tienes antecedentes de enfermedad cardíaca en tu familia, tu valor de colesterol es {k_colesterol}, tu valor de glicemia es {l_glicemia}, y tu estatura es {m_estatura}.
+  # - text: almacenaré la información.
+actions:
+- validate_name_form
+forms:
+  nombre_form:
+    a_first_name:
+    - type: from_text
+    b_last_name:
+    - type: from_text
+    c_genero:
+    - entity: genero
+      intent: genero
+      type: from_entity
+    d_fumador:
+    - intent: afirmar
+      type: from_intent
+      value: Si
+    - intent: negar
+      type: from_intent
+      value: No
+    e_peso:
+    - entity: peso
+      intent: peso
+      type: from_entity
+    f_edad:
+    - entity: edad
+      intent: edad
+      type: from_entity
+    g_presion_arterial:
+    - type: from_text
+    h_diabetes:
+    - intent: afirmar
+      type: from_intent
+      value: Si
+    - intent: negar
+      type: from_intent
+      value: No
+    i_insuficiencia_renal:
+    - intent: afirmar
+      type: from_intent
+      value: Si
+    - intent: negar
+      type: from_intent
+      value: No
+    j_antecedentes_cardiacos:
+    - intent: afirmar
+      type: from_intent
+      value: Si
+    - intent: negar
+      type: from_intent
+      value: No
+    k_colesterol:
+    - type: from_text
+    l_glicemia:
+    - type: from_text
+    m_estatura:
+    - entity: estatura
+      intent: estatura
+      type: from_entity
+e2e_actions: []

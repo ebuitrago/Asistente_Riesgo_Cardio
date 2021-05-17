@@ -1,0 +1,43 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+
+# - rule: Activate form
+#   steps:
+#   - intent: solicitar_nombres
+#   - action: nombre_form
+#   - active_loop: nombre_form
+#
+# - rule: Submit form
+#   condition:
+#   - active_loop: nombre_form
+#   steps:
+#   - action: nombre_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_submit
+#   - action: utter_slots_values
+
+# - rule: Activar genero form
+#   steps:
+#   - action: genero_form
+#   - active_loop: genero_form
+#   - slot_was_set:
+#     - requested_slot: genero
+#   - slot_was_set:
+#     - genero: hombre
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_agradecimiento_intermedio

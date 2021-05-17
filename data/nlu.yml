@@ -1,0 +1,138 @@
+version: "2.0"
+nlu:
+- intent: saludo
+  examples: |
+    - como estas
+    - hay alguien aquí?
+    - hey
+    - como vas?
+    - que tal todo
+    - buen día
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+    - hi
+    - Hola
+    - Buenos días
+    - hola, como vas?
+    - Buen día
+- intent: despedida
+  examples: |
+    - adios
+    - chao
+    - nos vemos luego
+    - hasta luego
+    - hasta la próxima
+    - chao Elison
+- intent: afirmar
+  examples: |
+    - si
+    - por supuesto
+    - claro
+    - Si a veces
+    - Si lo he hecho
+    - de vez en cuando
+    - si un poco
+    - Si
+- intent: negar
+  examples: |
+    - no
+    - nunca
+    - no lo creo
+    - no realmente
+    - jamás
+    - casi nunca
+- intent: agradecimiento
+  examples: |
+    - gracias
+    - muchas gracias
+    - gracias por tu ayuda
+    - impresionante
+    - muy valiosa tu ayuda
+    - muy amable
+    - gracias Elison
+- intent: genero
+  examples: |
+    - soy una [mujer](genero)
+    - [mujer](genero)
+    - soy [mujer](genero)
+    - soy un [hombre](genero)
+    - [hombre](genero)
+    - soy [hombre](genero)
+- intent: peso
+  examples: |
+    - mi peso es [12](peso) kilos
+    - yo peso [12](peso) kilos
+    - [12](peso) kilos
+    - [12](peso) kilogramos
+    - [12](peso) kgs
+    - [12](peso) k
+    - peso [12](peso) kilos
+    - peso [70](peso) kilos
+    - peso [60](peso) kilos
+    - [12](peso)
+- intent: edad
+  examples: |
+    - mi edad es [12](edad) años
+    - tengo [12](edad) años
+    - mis años son [12](edad)
+    - [12](edad) años
+    - yo tengo [12](edad) años
+    - [18](edad) años
+    - tengo [40](edad) años
+    - [18](edad) años
+    - [30](edad) años
+    - [40](edad) años
+    - [50](edad) años
+    - [60](edad) años
+    - [70](edad) años
+    - [80](edad) años
+    - [90](edad) años
+    - [100](edad) años
+- intent: presion_arterial
+  examples: |
+    - mi presion arterial es
+    - mis resultados de presion arterial son
+    - sistólica
+    - mi presion es
+    - mi tensión es
+- intent: colesterol
+  examples: |
+    - mi colesterol es [12](colesterol)
+    - mi colesterol [12](colesterol)
+    - Mi valor de colesterol [12](colesterol)
+    - Mis resultados de colesterol [12](colesterol)
+    - colesterol [200](colesterol)
+# - intent: glicemia
+#   examples: |
+#     - el valor de glicemia es [1](glicemia)
+#     - mi glicemia es [1](glicemia)
+#     - glicemia [1](glicemia)
+- intent: estatura
+  examples: |
+    - mido [150](estatura)
+    - mido [160](estatura) cms
+    - mido [165](estatura) centimetros
+    - [180](estatura) centimetros
+    - [155](estatura) cms
+#    - [170](estatura) cms
+#    - [178](estatura) cms
+#    - [178](estatura) centimetros
+#    - mi estatura es [178](estatura)
+
+
+# - regex: colesterol
+#   examples: |
+#     - \d{1,3}
+# - regex: edad
+#   examples: |
+#     - \d{2,3}
+# - regex: estatura
+#   examples: |
+#     - \d{2,3}
+# - regex: glicemia
+#   examples: |
+#     - \d{1,3}
+# - regex: peso
+#   examples: |
+#     - \d{2,3}

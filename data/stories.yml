@@ -1,0 +1,72 @@
+version: "2.0"
+stories:
+- story: modo_básico
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_solicitar_nombres
+  - action: nombre_form
+  - active_loop: nombre_form
+  - slot_was_set:
+    - requested_slot: a_first_name
+  - slot_was_set:
+    - a_first_name: vincent
+  - slot_was_set:
+    - requested_slot: b_last_name
+  - slot_was_set:
+    - b_last_name: vincent-mcvincent
+  - slot_was_set:
+    - requested_slot: c_genero
+  - slot_was_set:
+    - c_genero: hombre
+  - slot_was_set:
+    - requested_slot: d_fumador
+  - slot_was_set:
+    - d_fumador: si
+  - slot_was_set:
+    - requested_slot: e_peso
+  - slot_was_set:
+    - e_peso: 80
+  - slot_was_set:
+    - requested_slot: f_edad
+  - slot_was_set:
+    - f_edad: 20
+  - slot_was_set:
+    - requested_slot: g_presion_arterial
+  - slot_was_set:
+    - g_presion_arterial: 100
+  - slot_was_set:
+    - requested_slot: h_diabetes
+  - slot_was_set:
+    - h_diabetes: no
+  # - slot_was_set:
+  #   - requested_slot: i_insuficiencia_renal
+  # - slot_was_set:
+  #   - i_insuficiencia_renal: no
+  - slot_was_set:
+    - requested_slot: i_antecedentes_cardiacos
+  - slot_was_set:
+    - j_antecedentes_cardiacos: no
+  # - slot_was_set:
+  #   - requested_slot: k_colesterol
+  # - slot_was_set:
+  #   - k_colesterol: 150
+  # - slot_was_set:
+  #   - requested_slot: l_glicemia
+  # - slot_was_set:
+  #   - l_glicemia: 20
+  - slot_was_set:
+    - requested_slot: j_estatura
+  - slot_was_set:
+    - m_estatura: 170
+  - slot_was_set:
+    - requested_slot: k_perimetro_abdominal
+  - slot_was_set:
+    - k_perimetro_abdominal: 110
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - intent: agradecimiento
+  - action: utter_despedida

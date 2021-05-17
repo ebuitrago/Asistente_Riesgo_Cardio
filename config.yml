@@ -1,0 +1,40 @@
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+
+language: es_core_news_lg
+
+pipeline:
+  - name: SpacyNLP
+    model: es_core_news_lg
+  - name: SpacyTokenizer #conda install -c conda-forge spacy #conda install -c conda-forge cupy #python -m spacy download es_core_news_md
+  # - name: Tokenizer
+  - name: HFTransformersNLP
+    model_name: bert
+    model_weights: rasa/LaBSE
+  - name: LanguageModelFeaturizer
+    model_name: bert
+    model_weights: bert-base-uncased
+    # model_weights: rasa/LaBSE
+  - name: RegexFeaturizer
+    use_word_boundaries: True
+    # min_ngram: 1
+    # max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapper
+  # - name: ResponseSelector
+  #   epochs: 100
+  # - name: FallbackClassifier
+  #   threshold: 0.3
+  #   ambiguity_threshold: 0.1
+  # - name: DucklingHTTPExtractor
+  #   url: http://localhost:8000
+  #   dimensions: ["number"]
+
+
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+  - name: RulePolicy
