@@ -39,30 +39,26 @@ stories:
     - requested_slot: h_diabetes
   - slot_was_set:
     - h_diabetes: no
-  # - slot_was_set:
-  #   - requested_slot: i_insuficiencia_renal
-  # - slot_was_set:
-  #   - i_insuficiencia_renal: no
   - slot_was_set:
-    - requested_slot: i_antecedentes_cardiacos
+    - requested_slot: i_insuficiencia_renal
+  - slot_was_set:
+    - i_insuficiencia_renal: no
+  - slot_was_set:
+    - requested_slot: j_antecedentes_cardiacos
   - slot_was_set:
     - j_antecedentes_cardiacos: no
-  # - slot_was_set:
-  #   - requested_slot: k_colesterol
-  # - slot_was_set:
-  #   - k_colesterol: 150
-  # - slot_was_set:
-  #   - requested_slot: l_glicemia
-  # - slot_was_set:
-  #   - l_glicemia: 20
   - slot_was_set:
-    - requested_slot: j_estatura
+    - requested_slot: k_colesterol
+  - slot_was_set:
+    - k_colesterol: 200
+  - slot_was_set:
+    - requested_slot: l_glicemia
+  - slot_was_set:
+    - l_glicemia: 80
+  - slot_was_set:
+    - requested_slot: m_estatura
   - slot_was_set:
     - m_estatura: 170
-  - slot_was_set:
-    - requested_slot: k_perimetro_abdominal
-  - slot_was_set:
-    - k_perimetro_abdominal: 110
   - slot_was_set:
     - requested_slot: null
   - active_loop: null

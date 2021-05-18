@@ -6,9 +6,9 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - saludo:
-    use_entities: false
+    use_entities: []
 - despedida:
-    use_entities: false
+    use_entities: []
 - genero:
     use_entities: true
 - peso:
@@ -213,7 +213,6 @@ responses:
   - text: Ok. Thanks!
   utter_slots_values:
   - text: Entonces recordaré que tu nombre es {a_first_name} {b_last_name}, eres {c_genero}, {d_fumador} fumas, pesas {e_peso} kilogramos, tienes {f_edad} años, tu presión arterial es {g_presion_arterial}, {h_diabetes} te han diagnósticado diabetes, {i_insuficiencia_renal} te han diagnósticado insuficiencia renal, {j_antecedentes_cardiacos} tienes antecedentes de enfermedad cardíaca en tu familia, tu valor de colesterol es {k_colesterol}, tu valor de glicemia es {l_glicemia}, y tu estatura es {m_estatura}.
-  # - text: almacenaré la información.
 actions:
 - validate_name_form
 forms:
