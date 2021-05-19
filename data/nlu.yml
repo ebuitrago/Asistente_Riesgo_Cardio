@@ -71,6 +71,7 @@ nlu:
     - peso [70](peso) kilos
     - peso [60](peso) kilos
     - [12](peso)
+    - peso [72](peso) kilos
 - intent: edad
   examples: |
     - mi edad es [12](edad) años
@@ -88,6 +89,7 @@ nlu:
     - [80](edad) años
     - [90](edad) años
     - [100](edad) años
+    - tengo [38](edad) años
 - intent: presion_arterial
   examples: |
     - mi presion arterial es
@@ -102,6 +104,7 @@ nlu:
     - Mi valor de colesterol [12](colesterol)
     - Mis resultados de colesterol [12](colesterol)
     - colesterol [200](colesterol)
+    - colesterol [125](colesterol)
 - intent: estatura
   examples: |
     - mido [150](estatura)
@@ -109,3 +112,8 @@ nlu:
     - mido [165](estatura) centimetros
     - [180](estatura) centimetros
     - [155](estatura) cms
+    - mido [180](peso) cms
+    - [180](edad) cms
+- intent: glicemia
+  examples: |
+    - [50](edad) glicemia
