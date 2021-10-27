@@ -1,30 +1,146 @@
 from typing import Text, List, Any, Dict
-
-from rasa_sdk import Tracker, FormValidationAction
-from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher, Action
+from rasa_sdk.forms import FormValidationAction
+from rasa_sdk.events import SlotSet, EventType
 from rasa_sdk.types import DomainDict
+import numpy as np
+import pickle
+import joblib
 
-
-class ValidateNameForm(FormValidationAction):
-# class ValidateNameForm(Action):
+class ValidateNombreForm(FormValidationAction):
     def name(self) -> Text:
-        return "validate_name_form"
+        return "validate_nombre_form"   
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[EventType]:
+        return []
+    def validate_a_nombre(
+            self,
+            slot_value: Any,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: DomainDict,
+            ) -> Dict[Text, Any]:
+            """ Validate Slot Value. """
+            if not slot_value:
+                return {"a_nombre": None}
+            else:
+                return {"a_nombre": slot_value}
 
-    def validate_a_first_name(
-        self,
-        slot_value: Any,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> Dict[Text, Any]:
-        """Validate `a_first_name` value."""
-        # If the name is super short, it might be wrong.
-        print(f"First name given = {slot_value} length = {len(slot_value)}")
-        if len(slot_value) <= 2:
-            dispatcher.utter_message(text=f"That's a very short name. I'm assuming you mis-spelled.")
-            return {"first_name": None}
+class ActionLongitudNombre(Action):
+    def name(self) -> Text:
+        return "action_longitud_nombre"
+    def run(
+            self,
+            dispatcher, 
+            tracker: Tracker,
+            domain: DomainDict,
+            ) -> List[Dict[Text, Any]]:
+
+            nombre = tracker.get_slot('a_nombre')
+            if len(nombre) <= 2:
+                dispatcher.utter_message(text="El nombre que me dices es muy corto. Revisa si lo digitaste correctamente.")
+                #dispatcher.utter_message(buttons = [
+                #    {"payload": "/afirmar", "title": "Sí, es mi nombre."},
+                #    {"payload": "/nombre_equivocado", "title": "¡¡Upss!! Me equivoqué. ¡Quiero volver a decirte mi nombre!"}, 
+                #])
+
+                #dispatcher.utter_message(text='Prueba')
+#                if tracker.get_intent_of_latest_message = 'nombre_equivocado':
+#                    return {'a_nombre': }
+                return[]
+                #return {"a_nombre": nombre}
+            #else:
+            #    return {"a_nombre": nombre}
+
+
+#Obtener respuestas del usuario
+class ActionGetUserVals(FormValidationAction):
+    def name(self) -> Text:
+        return "action_get_user_vals"
+
+    async def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+#            domain: DomainDict,
+            domain: Dict[Text, Any],
+#            ) -> List[Dict[Text, Any]]:
+           ) -> List[EventType]:  
+        #Obtener valores de los slots
+        nombre = tracker.get_slot('a_nombre')
+        edad = int(tracker.get_slot('b_edad'))
+        colesterol_hdl = int(tracker.get_slot('c_colesterol_hdl'))
+        genero = tracker.get_slot('d_genero')
+        colesterol_total = int(tracker.get_slot('e_colesterol_total'))        
+        cardiacos = tracker.get_slot('f_antecedentes_cardiacos')
+        pa1 = int(tracker.get_slot('g_presion_sistolica'))
+        trigliceridos = int(tracker.get_slot('h_trigliceridos'))
+        colesterol_ldl = int(tracker.get_slot('i_colesterol_ldl'))
+        
+        #Transfomación de datos
+        if genero == 'hombre':
+            genero = 1
         else:
-            return {"first_name": slot_value}
+            genero = 0
+
+        if cardiacos == 'Si':
+            cardiacos = 1
+        else:
+            cardiacos = 0
+
+        data = np.array([edad, colesterol_hdl, genero, colesterol_total, cardiacos, pa1, trigliceridos, colesterol_ldl])
+        dispatcher.utter_message(text="Estoy procesando la información que me brindaste...")
+#        dispatcher.utter_message(text=print(data))
+        #loaded_model = joblib.load("./elison_rfc_sub.joblib")
+        #pickle.dump(xg_class, open("elison_xgboost_sub.dat", "wb"))
+        loaded_model = pickle.load(open("elison_xgboost_sub_cb.pkl", "rb"))
+
+        #Predecir riesgo cardiovascular
+        rcv_pred = loaded_model.predict(data.reshape(1,8))
+
+        #Convertir indicador número de rcv a textoi
+        rcv = ""
+        if rcv_pred == 0:
+            rcv = "Bajo"
+        if rcv_pred == 1:
+            rcv = "Intermedio"
+        if rcv_pred == 2:
+            rcv = "Alto"
+
+        #Mostrar resultado en pantalla
+        dispatcher.utter_message(text="Tu nivel de riesgo cardiovascular es: ")
+        dispatcher.utter_message(text=rcv)
+
+        return []
+
+
+#class ValidateNameForm(Action):
+#    def name(self) -> Text:
+#        return "validate_name_form"
+#    def run(self,
+#            dispatcher: CollectingDispatcher,
+#            tracker: Tracker,
+#            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#        dispatcher.utter_message(text="Probando custom actions")
+#        nombre = tracker.get_slot('a_first_name')
+#        if len(nombre) <= 2:
+#            dispatcher.utter_message(text="That's a very short name. I'm assuming you mis-spelled.")
+#        return[]
+
+
+
+
+        #"""Validate `a_first_name` value."""
+        ## If the name is super short, it might be wrong.
+        #print(f"First name given = {slot_value} length = {len(slot_value)}")
+        #if len(slot_value) <= 2:
+        #    dispatcher.utter_message(text=f"That's a very short name. I'm assuming you mis-spelled.")
+        #    return {"first_name": None}
+        #else:
+        #    return {"first_name": slot_value}
 
     # def validate_last_name(
     #     self,
