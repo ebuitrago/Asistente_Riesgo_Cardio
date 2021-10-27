@@ -1,6 +1,8 @@
 version: "2.0"
+
 stories:
-- story: modo_básico
+
+- story: Solicitar Nombre
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -8,61 +10,128 @@ stories:
   - action: nombre_form
   - active_loop: nombre_form
   - slot_was_set:
-    - requested_slot: a_first_name
-  - slot_was_set:
-    - a_first_name: vincent
-  - slot_was_set:
-    - requested_slot: b_last_name
-  - slot_was_set:
-    - b_last_name: vincent-mcvincent
-  - slot_was_set:
-    - requested_slot: c_genero
-  - slot_was_set:
-    - c_genero: hombre
-  - slot_was_set:
-    - requested_slot: d_fumador
-  - slot_was_set:
-    - d_fumador: si
-  - slot_was_set:
-    - requested_slot: e_peso
-  - slot_was_set:
-    - e_peso: 80
-  - slot_was_set:
-    - requested_slot: f_edad
-  - slot_was_set:
-    - f_edad: 20
-  - slot_was_set:
-    - requested_slot: g_presion_arterial
-  - slot_was_set:
-    - g_presion_arterial: 100
-  - slot_was_set:
-    - requested_slot: h_diabetes
-  - slot_was_set:
-    - h_diabetes: no
-  - slot_was_set:
-    - requested_slot: i_insuficiencia_renal
-  - slot_was_set:
-    - i_insuficiencia_renal: no
-  - slot_was_set:
-    - requested_slot: j_antecedentes_cardiacos
-  - slot_was_set:
-    - j_antecedentes_cardiacos: no
-  - slot_was_set:
-    - requested_slot: k_colesterol
-  - slot_was_set:
-    - k_colesterol: 200
-  - slot_was_set:
-    - requested_slot: l_glicemia
-  - slot_was_set:
-    - l_glicemia: 80
-  - slot_was_set:
-    - requested_slot: m_estatura
-  - slot_was_set:
-    - m_estatura: 170
+    - requested_slot: a_nombre
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: utter_submit
-  - action: utter_slots_values
+  - action: action_longitud_nombre
+    #  - intent: nombre_equivocado
+  - action: edad_form
+  - active_loop: edad_form
+  - slot_was_set:
+    - requested_slot: b_edad
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: colesterol_hdl_form
+  - active_loop: colesterol_hdl_form
+  - slot_was_set:
+    - requested_slot: c_colesterol_hdl
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: genero_form
+  - active_loop: genero_form
+  - slot_was_set:
+    - requested_slot: d_genero
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: colesterol_total_form
+  - active_loop: colesterol_total_form
+  - slot_was_set:
+    - requested_slot: e_colesterol_total
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null 
+  - action: antecedentes_cardiacos_form
+  - active_loop: antecedentes_cardiacos_form
+  - slot_was_set:
+    - requested_slot: f_antecedentes_cardiacos
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: presion_sistolica_form
+  - active_loop: presion_sistolica_form
+  - slot_was_set:
+    - requested_slot: g_presion_sistolica
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: trigliceridos_form
+  - active_loop: trigliceridos_form
+  - slot_was_set:
+    - requested_slot: h_trigliceridos
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: colesterol_ldl_form
+  - active_loop: colesterol_ldl_form
+  - slot_was_set:
+    - requested_slot: i_colesterol_ldl
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_user_vals  
+  #- action: utter_slots_values
   - intent: agradecimiento
   - action: utter_despedida
+
+
+
+    #- story: Corregir nombre
+    #  steps:
+    #  - intent: nombre_equivocado
+    #  - action: utter_nombre_equivocado  
+    #  - action: nombre_form
+
+
+    #- story: Action Longitud Nombre
+    #  steps:
+    #  - action: nombre_form
+    #  - active_loop: null
+    #  - slot_was_set:
+    #    - a_nombre: null
+    #  - action: action_longitud_nombre
+
+#stories:
+#- story: modo_básico
+#  steps:
+#  - intent: saludo
+#  - action: utter_saludo
+#  - action: utter_solicitar_nombres
+#  - action: nombre_form  
+#  - active_loop: nombre_form
+#  - slot_was_set:
+#    - requested_slot: a_nombre 
+      #  - slot_was_set:
+      #- requested_slot: b_apellido
+      #  - slot_was_set:
+          #    - requested_slot: c_genero
+          #- slot_was_set:
+          #    - requested_slot: d_fumador
+          #  - slot_was_set:
+          #    - requested_slot: e_peso
+          #  - slot_was_set:
+          #    - requested_slot: f_edad
+          #  - slot_was_set:
+          #    - requested_slot: g_presion_arterial
+          #  - slot_was_set:
+          #    - requested_slot: h_diabetes
+          #  - slot_was_set:
+          #    - requested_slot: i_insuficiencia_renal
+          #  - slot_was_set:
+          #    - requested_slot: j_antecedentes_cardiacos
+          #  - slot_was_set:
+          #    - requested_slot: k_colesterol
+          #  - slot_was_set:
+          #    - requested_slot: l_glicemia
+          #  - slot_was_set:
+          #    - requested_slot: m_estatura
+#  - slot_was_set:
+#- requested_slot: null
+#  - active_loop: null
+#  - action: utter_submit
+#  - action: utter_slots_values
+#  - intent: agradecimiento
+#  - action: utter_despedida

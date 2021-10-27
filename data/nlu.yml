@@ -33,7 +33,6 @@ nlu:
     - Si lo he hecho
     - de vez en cuando
     - si un poco
-    - Si
 - intent: negar
   examples: |
     - no
@@ -51,6 +50,19 @@ nlu:
     - muy valiosa tu ayuda
     - muy amable
     - gracias Elison
+- intent: edad
+  examples: |
+    - mi edad es [12 años](edad)
+    - tengo [12 años](edad)
+    - mis años son [12](edad)
+    - [12 años](edad)
+    - yo tengo [30 años](edad)
+    - [55 años](edad)
+    - tengo [40 años](edad)
+- intent: colesterol_hdl
+  examples: |
+    - mi colesterol hld es
+    - el valor de mi colesterol hld es
 - intent: genero
   examples: |
     - soy una [mujer](genero)
@@ -59,61 +71,36 @@ nlu:
     - soy un [hombre](genero)
     - [hombre](genero)
     - soy [hombre](genero)
-- intent: peso
+    - yo soy [hombre](genero)
+    - yo soy [mujer](genero)
+- intent: colesterol_total
   examples: |
-    - mi peso es [12](peso) kilos
-    - yo peso [12](peso) kilos
-    - [12](peso) kilos
-    - [12](peso) kilogramos
-    - [12](peso) kgs
-    - [12](peso) k
-    - peso [12](peso) kilos
-    - peso [70](peso) kilos
-    - peso [60](peso) kilos
-    - [12](peso)
-    - peso [72](peso) kilos
-- intent: edad
+    - mi total es colesterol [12]
+    - mi colesterol [12]
+    - Mi valor de colesterol total es [12]
+    - Mis resultados de colesterol total [12]
+    - colesterol total [200]
+- intent: presion_arterial_sistolica
   examples: |
-    - mi edad es [12](edad) años
-    - tengo [12](edad) años
-    - mis años son [12](edad)
-    - [12](edad) años
-    - yo tengo [12](edad) años
-    - [18](edad) años
-    - tengo [40](edad) años
-    - [30](edad) años
-    - [40](edad) años
-    - [50](edad) años
-    - [60](edad) años
-    - [70](edad) años
-    - [80](edad) años
-    - [90](edad) años
-    - [100](edad) años
-    - tengo [38](edad) años
-- intent: presion_arterial
-  examples: |
-    - mi presion arterial es
-    - mis resultados de presion arterial son
+    - mi presion arterial sistolica es
+    - mis resultados de presion arterial sistolica son
     - sistólica
-    - mi presion es
-    - mi tensión es
-- intent: colesterol
+    - mi presion sistolica es
+    - mi tensión sistolica es
+- intent: trigliceridos
   examples: |
-    - mi colesterol es [12](colesterol)
-    - mi colesterol [12](colesterol)
-    - Mi valor de colesterol [12](colesterol)
-    - Mis resultados de colesterol [12](colesterol)
-    - colesterol [200](colesterol)
-    - colesterol [125](colesterol)
-- intent: estatura
+    - mis trigliceridos son
+    - el valor de trigliceridos es
+    - trigliceridos
+- intent: colesterol_ldl
   examples: |
-    - mido [150](estatura)
-    - mido [160](estatura) cms
-    - mido [165](estatura) centimetros
-    - [180](estatura) centimetros
-    - [155](estatura) cms
-    - mido [180](peso) cms
-    - [180](edad) cms
-- intent: glicemia
+    - mi colesterol ldl es
+    - el valor de mi colesterol ldl es
+- intent: nombre_equivocado
   examples: |
-    - [50](edad) glicemia
+    - Tienes razón, el nombre es incorrecto.
+    - En fecto, me quedó mal escrito.
+    - Quiero volver a digitar mi nombre.
+    - El nombre es incorrecto
+    - Me quedó mal escrito
+    - nombre incorrecto
