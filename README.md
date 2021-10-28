@@ -15,7 +15,7 @@ _ELISON está construído sobre RASA open source para linux. Los pre-requisitos 
 
 ```
 Sistemas operativo Linux Ubuntu 18 o superior; aunque se podría probar con otras distros
-Python 3.0 o superior
+Python 3.7 
 
 ```
 
@@ -23,10 +23,11 @@ Python 3.0 o superior
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Crear ambiente virtual_
+_Crear ambiente virtual (desde Conda seguir estas instrucciones)_
 
 ```
-Da un ejemplo
+conda create -n elison python=3.7
+conda activate elison
 ```
 
 _Instalar RASA Open Source_
