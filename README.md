@@ -93,4 +93,4 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 
-*Un agradecimiento enorme a [Villanuevand](https://github.com/Villanuevand) por la plantilla para este readme.md
+* Un agradecimiento enorme a [Villanuevand](https://github.com/Villanuevand) por la plantilla para este readme.md 😊
