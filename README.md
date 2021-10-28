@@ -1,6 +1,6 @@
-# ELISON: AEL CHATBOT PARA LA PREDICCIÓN DE RIESGO CARDIOVASCULAR
+# ELISON: EL CHATBOT PARA LA PREDICCIÓN DE RIESGO CARDIOVASCULAR
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Elison es un chatbot clasificador de riesgo cardiovascular (RCV), construído construido sobre el framework RASA en python, con el fin de aprovechar la funcionalidad DIET (Dual Intent and Entity Transformer), la cual está basada en transformers y permite utilizar modelos previamente entrenados como BERT, para mejorar la comunicación con el paciente. Así mismo, incorpora un modelo de clasificación multiclase basado en el algoritmo Xgboost para predecir el RCV en tres niveles: bajo, latente y alto. El entrenamiento del modelo predictivo de RCV se hizo usando el conjunto de datos de Pacientes Crónicos de Pasto año 2017 ( [datos abiertos](https://www.datos.gov.co/)). La validación del modelo en términos de las métricas de desempeño accuracy y recall, resultó en un 78% con un costo computacional mínimo._
 
 ## Comenzando 🚀
 
