@@ -83,9 +83,9 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Elias Buitrago Bolivar** - *Desarrollo de software, documentación* - [villanuevand](https://github.com/villanuevand)
-* **Sonia Tereza Ardila** - *Trabajo Inicial, documentación* - [villanuevand](https://github.com/villanuevand)
-* **Carlos Isaac Zainea** - *Director Trabajo de Grado* - 
+* **Elias Buitrago Bolivar** - *Desarrollo de software, documentación* - [ebuitrago](https://github.com/ebuitrago)
+* **Sonia Tereza Ardila** - *Trabajo Inicial, documentación* - [sap0408](https://github.com/sap0408)
+* **Carlos Isaac Zainea** - *Director Trabajo de Grado* - [Izainea](https://github.com/Izainea)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
