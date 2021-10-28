@@ -11,10 +11,12 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_ELISON está construído sobre RASA open source para linux. Los pre-requisitos mínimos recomendados son los siguientes:_
 
 ```
-Da un ejemplo
+Python 3.0 o superior
+Crear un ambiente virtual
+
 ```
 
 ### Instalación 🔧
