@@ -14,8 +14,8 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 _ELISON está construído sobre RASA open source para linux. Los pre-requisitos mínimos recomendados son los siguientes:_
 
 ```
+Sistemas operativo Linux Ubuntu 18 o superior; aunque se podría probar con otras distros
 Python 3.0 o superior
-Crear un ambiente virtual
 
 ```
 
@@ -23,16 +23,22 @@ Crear un ambiente virtual
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
+_Crear ambiente virtual_
 
 ```
 Da un ejemplo
 ```
 
-_Y repite_
+_Instalar RASA Open Source_
 
 ```
-hasta finalizar
+sudo yum install python-pip
+pip3 install -U pip
+pip3 install rasa
+pip3 install rasa[full]
+pip3 install rasa[spacy]
+python3 -m spacy download es_core_news_lg
+pip install rasa --upgrade
 ```
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
