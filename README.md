@@ -59,11 +59,19 @@ unzip ngrok-stable-linux-amd64.zip
 
 ## Exponer puertos con ``` ngrok ``` ⚙️
 
-La versión beta actual de ELISON se ejecuta de manera local sobre RASA open source. Sin embargo, se requiere exponer el puerto local 5005 para que el despliegue en Telegram sea posible. Esto se hace mediante ngrok, como se explica a continuación.
+La versión beta actual de ELISON se ejecuta de manera local sobre RASA open source. Sin embargo, se requiere exponer el puerto local 5005 para que el despliegue en Telegram sea posible. Esto se hace mediante ngrok.
+
+_Ejecutar ngrok_
 
 ```
 ./ngrok http 5005 
 ```
+
+_Otra manera para ejecutar ngrok_
+
+```
+./ngrok http 5005 --log=stdout > ngrok.log & 
+``` 
 
 ## Modificar archivo credentials.yml ⚙️
 
