@@ -93,15 +93,23 @@ rasa run &
 
 ## Despliegue 📦
 
-_El despliege final de ELISON beta se hace mediante Telegram, aprovechando la flexibilidad de RASA para agregar distintos canales para lograr la interacción con el usuario final_
+_El despliege final de ELISON beta se hace mediante Telegram, aprovechando la flexibilidad de RASA para agregar distintos canales para lograr la interacción con el usuario final. En Telegram se accede a ELISON beta contactándo al usuario Elison. Entonecs, para que un usuario pueda iniciar sesión con ELISON beta, se requiere haber realizado los siguientes pasos:_
+
+* Exponer puerto local 5005 con ngrok
+* Cambiar la dirección generada por ngrok en el campo respectivo en el archivo credentials.yml
+* Ejecutar el servidor de acciones de RASA open source
+* Ejecutar el servidor de RASA open source
+
+Los pasos anteriores fueron explicados anteriormente, por lo tanto, en este punto se podrá acceder e ELISON beta en telegram 😊
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Las siguientes herramientas fueron utilizadas en el desarrollo de ELISON beta:_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+
+* [RASA open source](https://rasa.com/docs/rasa/) - El framework de python sobre el cual se desarrolló ELISON beta
+* [Ngrok](https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip/) - Usado para exponer puerto local 5005
+* [Xgboost](https://xgboost.readthedocs.io/en/latest/python/python_intro.html) - Usado como modelos clasificador de RCV
 
 ## Autores ✒️
 
