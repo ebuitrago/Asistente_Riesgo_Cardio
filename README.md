@@ -44,11 +44,20 @@ pip install rasa --upgrade
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-## Ejecutando las pruebas ⚙️
+## Exponer puertos con ngrok ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+_La versión beta actual de ELISON se ejecuta de manera local sobre RASA open source. Sin embargo, se requiere exponer un puerto local para que el despliegue en Telegram sea posible. Esto se hace mediante ``` ngrok ```, como se explica a continuación.
 
-### Analice las pruebas end-to-end 🔩
+* Descargar ``` ngrok ``` y descomprimirlo en el directorio raiz; el mismo donde se alojará el directorio con los archivos fuente de ELISON
+* Ejecutar la siguiente línea de código para exponer el puerto 5005, el cual pertimité acceder a la versión de producción de ELISON beta:
+
+```
+./ngrok 
+```
+  
+* buscar el archivo .out 
+
+### Ejecutar RASA action server 🔩
 
 _Explica que verifican estas pruebas y por qué_
 
@@ -56,7 +65,7 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
-### Y las pruebas de estilo de codificación ⌨️
+### Ejecutar RASA ⌨️
 
 _Explica que verifican estas pruebas y por qué_
 
@@ -66,7 +75,7 @@ Da un ejemplo
 
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+_El despliege final de ELISON beta se hace mediante Telegram, aprovechando la flexibilidad de RASA para agregar distintos canales para lograr la interacción con el usuario final_
 
 ## Construido con 🛠️
 
