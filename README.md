@@ -64,20 +64,21 @@ _Ejecutar ngrok_
 ./ngrok http 5005 
 ```
 
+![image](https://user-images.githubusercontent.com/16356135/139560176-3a005668-afc5-42bf-a2d2-6fc4458f377c.png)
+
+En el recuadro rojo se muestra la nueva dirección que se debe actualizar en el respectivo campo del archivo credentials.yml. Más adelante se explica este paso.
+
 _Otra manera para ejecutar ngrok_
 
 ```
 ./ngrok http 5005 --log=stdout > ngrok.log & 
 cat ngrok.log | grep https
 ``` 
+Si opta por esta manera de ejecutar ngrok, debe buscar la dirección que se muestra después del *https:*
 
 ## Modificar archivo credentials.yml ⚙️
 
 Una vez ejecutado ngrok, se genera una dirección que expone el puerto local 5005 en https. La nueva dirección generada por ngrok debe ser cambiada en el campo respectivo del archivo credentials.yml. Esto debe hacerse cada vez que se desea ejecutar ELISON beta. Una vez realizado este ajuste, se podrán ejecutar tanto el servidor de acciones como el servidor de la versión en producción de RASA; como se muestra en los próximos pasos.
-
-![image](https://user-images.githubusercontent.com/16356135/139560176-3a005668-afc5-42bf-a2d2-6fc4458f377c.png)
-
-En el recuadro rojo se muestra la nueva dirección que se debe actualizar en el respectivo campo del archivo credentials.yml
 
 ### Ejecutar RASA action server 🔩
 
