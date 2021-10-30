@@ -43,6 +43,7 @@ pip install rasa --upgrade
 ```
 
 _Descargar ngrok_
+
 Descargar ``` ngrok ``` y descomprimirlo en el directorio raiz; el mismo donde se alojará el directorio con los archivos fuente de ELISON
 
 ```
@@ -52,7 +53,7 @@ unzip ngrok-stable-linux-amd64.zip
 
 ## Exponer puertos con ``` ngrok ``` ⚙️
 
-_La versión beta actual de ELISON se ejecuta de manera local sobre RASA open source. Sin embargo, se requiere exponer el puerto local 5005 para que el despliegue en Telegram sea posible. Esto se hace mediante ``` ngrok ```, como se explica a continuación.
+_La versión beta actual de ELISON se ejecuta de manera local sobre RASA open source. Sin embargo, se requiere exponer el puerto local 5005 para que el despliegue en Telegram sea posible. Esto se hace mediante ``` ngrok ```, como se explica a continuación._
 
 ```
 ./ngrok http 5005 
