@@ -100,12 +100,11 @@ _El despliege final de ELISON beta se hace mediante Telegram, aprovechando la fl
 * Ejecutar el servidor de acciones de RASA open source
 * Ejecutar el servidor de RASA open source
 
-Los pasos anteriores fueron explicados anteriormente, por lo tanto, en este punto se podrá acceder e ELISON beta en telegram 😊
+Los pasos anteriores fueron explicados anteriormente, por lo tanto, en este punto se podrá acceder a ELISON beta en telegram 😊
 
 ## Construido con 🛠️
 
 _Las siguientes herramientas fueron utilizadas en el desarrollo de ELISON beta:_
-
 
 * [RASA open source](https://rasa.com/docs/rasa/) - El framework de python sobre el cual se desarrolló ELISON beta
 * [Ngrok](https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip/) - Usado para exponer puerto local 5005
