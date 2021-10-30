@@ -21,7 +21,7 @@ Python 3.7
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+_La versión actual de ELISON beta, se ejecuta localmente haciendo uso de RASA open source. Se recomienda crear un ambiente virtual con python versión 3.7 o superior. A continuación se explica cómo crear el ambiente virtual y instalar RASA open source, así mismo se detalla como descargar el repositorio de ELISON beta. Finalmente ser requiere descargar y descompromir ngrok; mas adelante se explica su utilidad._
 
 _Crear ambiente virtual (desde Conda seguir estas instrucciones)_
 
