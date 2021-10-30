@@ -76,6 +76,9 @@ cat ngrok.log | grep https
 ``` 
 Si opta por esta manera de ejecutar ngrok, debe buscar la dirección que se muestra después del *https:*
 
+![image](https://user-images.githubusercontent.com/16356135/139560336-a0647efd-4eea-4383-828e-10ea18432200.png)
+
+
 ## Modificar archivo credentials.yml ⚙️
 
 Una vez ejecutado ngrok, se genera una dirección que expone el puerto local 5005 en https. La nueva dirección generada por ngrok debe ser cambiada en el campo respectivo del archivo credentials.yml. Esto debe hacerse cada vez que se desea ejecutar ELISON beta. Una vez realizado este ajuste, se podrán ejecutar tanto el servidor de acciones como el servidor de la versión en producción de RASA; como se muestra en los próximos pasos.
