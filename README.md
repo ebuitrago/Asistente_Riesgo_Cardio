@@ -21,7 +21,7 @@ Python 3.7
 
 ### Instalación 🔧
 
-_La versión actual de ELISON beta, se ejecuta localmente haciendo uso de RASA open source. Se recomienda crear un ambiente virtual con python versión 3.7 o superior. A continuación se explica cómo crear el ambiente virtual y instalar RASA open source, así mismo se detalla como descargar el repositorio de ELISON beta. Finalmente ser requiere descargar y descompromir ngrok; mas adelante se explica su utilidad._
+_La versión actual de ELISON beta, se ejecuta localmente haciendo uso de RASA open source. Se recomienda crear un ambiente virtual con python versión 3.7 o superior. A continuación se explica cómo crear el ambiente virtual e instalar RASA open source, así mismo se detalla como descargar el repositorio de ELISON beta. Adicionalmente, se requiere descargar y descompromir ngrok._
 
 _Crear ambiente virtual (desde Conda seguir estas instrucciones)_
 
@@ -40,6 +40,11 @@ pip3 install rasa[full]
 pip3 install rasa[spacy]
 python3 -m spacy download es_core_news_lg
 pip install rasa --upgrade
+```
+_Descargar el repositorio de ELISON beta_
+
+```
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 ```
 
 _Descargar ngrok_
