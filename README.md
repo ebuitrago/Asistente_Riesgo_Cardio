@@ -109,17 +109,16 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+_ELISON beta surge como producto del trabajo de grado de Maestría en Analítica de Datos en la Universidad Central. Los autores de ELISON beta son:_
 
-* **Elias Buitrago Bolivar** - *Desarrollo de software, documentación* - [ebuitrago](https://github.com/ebuitrago)
+* **Elias Buitrago Bolivar** - *Desarrollo de software, calibración modelo predictivo riesgo cardiovascular, documentación* - [ebuitrago](https://github.com/ebuitrago)
 * **Sonia Tereza Ardila** - *Trabajo Inicial, documentación* - [sap0408](https://github.com/sap0408)
-* **Carlos Isaac Zainea** - *Director Trabajo de Grado* - [Izainea](https://github.com/Izainea)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+  
+Los autores agradecen al profesor Carlos Isaac Zainea por sus aportes en distintas fases del proyecto 
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia GPL v3.0 - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 
 * Un agradecimiento enorme a [Villanuevand](https://github.com/Villanuevand) por la plantilla para este readme.md 😊
