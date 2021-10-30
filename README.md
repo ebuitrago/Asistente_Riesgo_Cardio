@@ -68,6 +68,7 @@ _Otra manera para ejecutar ngrok_
 
 ```
 ./ngrok http 5005 --log=stdout > ngrok.log & 
+cat ngrok.log 
 ``` 
 
 ## Modificar archivo credentials.yml ⚙️
