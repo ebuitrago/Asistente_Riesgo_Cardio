@@ -59,7 +59,7 @@ unzip ngrok-stable-linux-amd64.zip
 
 ## Exponer puertos con ``` ngrok ``` ⚙️
 
-_La versión beta actual de ELISON se ejecuta de manera local sobre RASA open source. Sin embargo, se requiere exponer el puerto local 5005 para que el despliegue en Telegram sea posible. Esto se hace mediante ngrok, como se explica a continuación._
+La versión beta actual de ELISON se ejecuta de manera local sobre RASA open source. Sin embargo, se requiere exponer el puerto local 5005 para que el despliegue en Telegram sea posible. Esto se hace mediante ngrok, como se explica a continuación.
 
 ```
 ./ngrok http 5005 
@@ -67,7 +67,7 @@ _La versión beta actual de ELISON se ejecuta de manera local sobre RASA open so
 
 ## Modificar archivo credentials.yml ⚙️
 
-_Una vez ejecutado ngrol, se genera una dirección que expone el puerto local 5005. LA nuevq dirección de ngrok debe ser cambiada en el campo respectivo del archivo credentials.yml. Esto debe hacerse cada vez que se desea ejecutar ELISON beta. Una vez realizada este ajuste, se podrán ejecutar tanto el servidor de acciones como el servidor de la versión en producción de RASA; como se muestra en los próximos pasos.
+Una vez ejecutado ngrok, se genera una dirección que expone el puerto local 5005. La nueva dirección generada por ngrok debe ser cambiada en el campo respectivo del archivo credentials.yml. Esto debe hacerse cada vez que se desea ejecutar ELISON beta. Una vez realizado este ajuste, se podrán ejecutar tanto el servidor de acciones como el servidor de la versión en producción de RASA; como se muestra en los próximos pasos.
 
 ### Ejecutar RASA action server 🔩
 
@@ -95,26 +95,14 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
 ## Autores ✒️
 
-_ELISON beta surge como producto del trabajo de grado de Maestría en Analítica de Datos en la Universidad Central. Los autores de ELISON beta son:_
+ELISON beta surge como producto de un trabajo de grado de Maestría en Analítica de Datos en la Universidad Central. A continuación se especifican tanto los nombres de los autores como sus respectivos aportes relacionados específicamente con ELISON beta:_
 
 * **Elias Buitrago Bolivar** - *Desarrollo de software, calibración modelo predictivo riesgo cardiovascular, documentación* - [ebuitrago](https://github.com/ebuitrago)
 * **Sonia Tereza Ardila** - *Trabajo Inicial, documentación* - [sap0408](https://github.com/sap0408)
   
-Los autores agradecen al profesor Carlos Isaac Zainea por sus aportes en distintas fases del proyecto 
+Los autores agradecen al profesor Carlos Isaac Zainea por su apoyo como director del proyecto de grado. 
 
 ## Licencia 📄
 
