@@ -102,6 +102,8 @@ _El despliege final de ELISON beta se hace mediante Telegram, aprovechando la fl
 
 Los pasos anteriores fueron explicados anteriormente, por lo tanto, en este punto se podrá acceder a ELISON beta en telegram 😊
 
+http://t.me/TuAsistenteCardiaco_Elisonbot
+
 ## Construido con 🛠️
 
 _Las siguientes herramientas fueron utilizadas en el desarrollo de ELISON beta:_
