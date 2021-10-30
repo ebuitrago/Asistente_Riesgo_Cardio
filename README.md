@@ -44,7 +44,8 @@ pip install rasa --upgrade
 _Descargar el repositorio de ELISON beta_
 
 ```
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+wget https://github.com/ebuitrago/Asistente_Riesgo_Cardio/archive/refs/heads/main.zip
+unzip Asistente_Riesgo_cardio.zip
 ```
 
 _Descargar ngrok_
@@ -70,10 +71,8 @@ _Una vez ejecutado ngrol, se genera una dirección que expone el puerto local 50
 
 ### Ejecutar RASA action server 🔩
 
-_Explica que verifican estas pruebas y por qué_
-
 ```
-Da un ejemplo
+rasa run actions &
 ```
 
 ### Ejecutar RASA ⌨️
@@ -81,7 +80,7 @@ Da un ejemplo
 _Explica que verifican estas pruebas y por qué_
 
 ```
-Da un ejemplo
+rasa run &
 ```
 
 ## Despliegue 📦
