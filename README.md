@@ -114,7 +114,7 @@ _Las siguientes herramientas fueron utilizadas en el desarrollo de ELISON beta:_
 
 ## Autores ✒️
 
-ELISON beta surge como producto de un trabajo de grado de Maestría en Analítica de Datos en la Universidad Central. A continuación se especifican tanto los nombres de los autores como sus respectivos aportes relacionados específicamente con ELISON beta:_
+ELISON beta surge como producto de un trabajo de grado de Maestría en Analítica de Datos en la Universidad Central. A continuación se especifican tanto los nombres de los autores como sus respectivos aportes relacionados específicamente con ELISON beta:
 
 * **Elias Buitrago Bolivar** - *Desarrollo de software, calibración modelo predictivo riesgo cardiovascular, documentación* - [ebuitrago](https://github.com/ebuitrago)
 * **Sonia Tereza Ardila** - *Trabajo Inicial, documentación* - [sap0408](https://github.com/sap0408)
