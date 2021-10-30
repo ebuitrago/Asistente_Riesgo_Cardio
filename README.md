@@ -6,9 +6,6 @@ _Elison es un chatbot clasificador de riesgo cardiovascular (RCV), construído c
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
-
 ### Pre-requisitos 📋
 
 _ELISON está construído sobre RASA open source para linux. Los pre-requisitos mínimos recomendados son los siguientes:_
