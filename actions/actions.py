@@ -121,7 +121,7 @@ class ActionGetUserVals(FormValidationAction):
         
         #Mostrar resultado en pantalla
         dispatcher.utter_message(text="Tu probabilidad de riesgo cardiovascular es: ")
-        dispatcher.utter_message(text=rcv_pred)
+        dispatcher.utter_message(rcv_pred)
 
         return []
 
