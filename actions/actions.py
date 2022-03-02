@@ -129,7 +129,7 @@ class ActionGetUserVals(FormValidationAction):
         #a = np.array([[1, 2, 3], [4, 5, 6]])
         a=np.array(rcv_pred)
         print(a.shape)
-        json_dump = json.dumps({'a': a, 'aa': [2, (2, 3, 4), a], 'bb': [2]}, cls=NumpyEncoder)
+        json_dump = json.dumps({'Bajo': a[0], 'Latente': a[1], 'Alto': a[2]}, cls=NumpyEncoder)
         print(json_dump)
         
                 
