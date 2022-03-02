@@ -112,7 +112,7 @@ class ActionGetUserVals(FormValidationAction):
         #if rcv_pred == 1:
         #    rcv = "Intermedio"
         #if rcv_pred == 2:
-            rcv = "Alto"
+        #    rcv = "Alto"
         
         #Mostrar resultado en pantalla
         #dispatcher.utter_message(text="Tu nivel de riesgo cardiovascular es: ")
