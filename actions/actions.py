@@ -96,7 +96,8 @@ class ActionGetUserVals(FormValidationAction):
 #        dispatcher.utter_message(text=print(data))
         #loaded_model = joblib.load("./elison_rfc_sub.joblib")
         #pickle.dump(xg_class, open("elison_xgboost_sub.dat", "wb"))
-        loaded_model = pickle.load(open("elison_xgboost_sub_cb.pkl", "rb"))
+        loaded_model = load_model('elison_rna3.h5',compile=False)
+        #loaded_model = pickle.load(open("elison_xgboost_sub_cb.pkl", "rb"))
 
         #Predecir riesgo cardiovascular
         rcv_pred = loaded_model.predict(data.reshape(1,8))
