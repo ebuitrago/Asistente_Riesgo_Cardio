@@ -119,9 +119,22 @@ class ActionGetUserVals(FormValidationAction):
         #dispatcher.utter_message(text=rcv)
         ##************************************************
         
+        class NumpyEncoder(json.JSONEncoder):
+            def default(self, obj):
+                if isinstance(obj, np.ndarray):
+                    return obj.tolist()
+                return json.JSONEncoder.default(self, obj)
+
+        #a = np.array([[1, 2, 3], [4, 5, 6]])
+        a=np.array(rcv_pred)
+        print(a.shape)
+        json_dump = json.dumps({'a': a, 'aa': [2, (2, 3, 4), a], 'bb': [2]}, cls=NumpyEncoder)
+        print(json_dump)
+        
+                
         #Mostrar resultado en pantalla
         dispatcher.utter_message(text="Tu probabilidad de riesgo cardiovascular es: ")
-        dispatcher.utter_message(rcv_pred)
+        dispatcher.utter_message(json_dump)
 
         return []
 
