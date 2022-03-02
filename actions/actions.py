@@ -102,20 +102,26 @@ class ActionGetUserVals(FormValidationAction):
 
         #Predecir riesgo cardiovascular
         rcv_pred = loaded_model.predict(data.reshape(1,8))
-        print(rcv_pred)
-        
+                
+        ##************************************************
+        ##Esto aplica solo para modelos basados en Xgboost
         #Convertir indicador número de rcv a textoi
-        rcv = ""
-        if rcv_pred == 0:
-            rcv = "Bajo"
-        if rcv_pred == 1:
-            rcv = "Intermedio"
-        if rcv_pred == 2:
+        #rcv = ""
+        #if rcv_pred == 0:
+        #    rcv = "Bajo"
+        #if rcv_pred == 1:
+        #    rcv = "Intermedio"
+        #if rcv_pred == 2:
             rcv = "Alto"
-
+        
         #Mostrar resultado en pantalla
-        dispatcher.utter_message(text="Tu nivel de riesgo cardiovascular es: ")
-        dispatcher.utter_message(text=rcv)
+        #dispatcher.utter_message(text="Tu nivel de riesgo cardiovascular es: ")
+        #dispatcher.utter_message(text=rcv)
+        ##************************************************
+        
+        #Mostrar resultado en pantalla
+        dispatcher.utter_message(text="Tu probabilidad de riesgo cardiovascular es: ")
+        dispatcher.utter_message(text=rcv_pred)
 
         return []
 
