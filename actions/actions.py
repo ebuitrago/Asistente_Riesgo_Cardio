@@ -7,6 +7,7 @@ from rasa_sdk.types import DomainDict
 import numpy as np
 import pickle
 import joblib
+from tensorflow.keras.models import  load_model
 
 class ValidateNombreForm(FormValidationAction):
     def name(self) -> Text:
