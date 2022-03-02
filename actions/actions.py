@@ -127,15 +127,15 @@ class ActionGetUserVals(FormValidationAction):
                 return json.JSONEncoder.default(self, obj)
 
         #a = np.array([[1, 2, 3], [4, 5, 6]])
-        a=np.array(rcv_pred)
-        print(a.shape)
-        json_dump = json.dumps({'Bajo': a[0], 'Latente': a[1], 'Alto': a[2]}, cls=NumpyEncoder)
+        a=np.array(rcv_pred)       
+        json_dump = json.dumps({'Bajo': a[0][0]*100, 'Latente': a[0][1]*100, 'Alto': a[0][2]*100}, cls=NumpyEncoder)
         print(json_dump)
-        
-                
+
+
         #Mostrar resultado en pantalla
-        dispatcher.utter_message(text="Tu probabilidad de riesgo cardiovascular es: ")
-        dispatcher.utter_message(json_dump)
+        dispatcher.utter_message(text="Tu probabilidad de riesgo cardiovascular expresada en porcentaje es: ")
+        dispatcher.utter_message(json_dump)    
+    
 
         return []
 
