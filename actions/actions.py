@@ -102,7 +102,8 @@ class ActionGetUserVals(FormValidationAction):
 
         #Predecir riesgo cardiovascular
         rcv_pred = loaded_model.predict(data.reshape(1,8))
-
+        print(rcv_pred)
+        
         #Convertir indicador número de rcv a textoi
         rcv = ""
         if rcv_pred == 0:
